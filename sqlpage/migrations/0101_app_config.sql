@@ -16,7 +16,7 @@ VALUES
     'Protected Page',
     'lock',
     '/',
-    '{"title": "Logout", "link": "logout"}'
+    '{"title": "Logout", "link": "logout.sql"}'
 );
 
 INSERT INTO x_shell_t (id_, title, icon, link)
