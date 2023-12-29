@@ -12,7 +12,7 @@ This is a very basic example of authentication and authorization boilerplate usi
 
 # Install
 
-```
+```bash
 git clone https://github.com/mnesarco/sqlpage_auth_example.git
 cd sqlpage_auth_example
 docker compose up
@@ -27,6 +27,34 @@ After docker services are up and runnig, Go to http://localhost:8087
 * **admin** has full access
 
 Password of all users is the same: `demo`
+
+# Authorization concept
+
+There are **users** and **resources** in the system. They are related through **roles** and access control lists (**ACL**)
+
+roles can be granted or revoked from users. Each role has a level access to a resource pattern.
+
+![ER](auth.png)
+
+You can check if the current session (logged in user) has access to a specific resource with a certain authorization level:
+
+```sql
+-- Check if current user has access to products resource with a minimum level of 30
+
+SELECT ...
+WHERE x_resource_access(sqlpage.cookie('session'), 'products', level);
+
+```
+
+You can also check if a user has some role:
+
+```sql
+-- Check if current user has admin or manager roles
+
+SELECT ...
+WHERE x_role_access(sqlpage.cookie('session'), 'admin', 'manager');
+
+```
 
 # Disclaimer
 

@@ -1,0 +1,24 @@
+digraph auth {
+
+    rankdir="LR";
+
+    node [shape=ellipse]; level
+
+    node [shape=record];
+
+    role [label="role"];
+    user [label="user", bgcolor="lightyellow", style=filled];
+    acl [label="acl"];
+    resource [shape=component, label=<&lt;&lt;pattern&gt;&gt;<BR/>resource>, bgcolor="lightyellow", style=filled];
+
+    edge [arrowhead=crow, arrowtail=crow, dir=both];
+    user -> role;
+    role -> acl;
+
+    edge [arrowhead=none, arrowtail=crow, dir=both];
+    acl -> level;
+
+    edge [arrowhead=crow, arrowtail=none, dir=both];
+    level -> resource;
+
+}
