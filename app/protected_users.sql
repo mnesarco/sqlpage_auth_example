@@ -32,6 +32,18 @@ SELECT 'text' as component,
        'Visible because you have **manager** role.' as contents_md 
     WHERE $has_users_access::boolean;
 
+SELECT 
+    'button' as component,
+    'sm'     as size,
+    'pill'   as shape
+    WHERE $has_users_access::boolean;
+SELECT 
+    'Add USer'      as title,
+    'signup.sql'    as link,
+    'plus'          as icon,
+    'blue'          as outline
+    WHERE $has_users_access::boolean;
+
 SELECT 'table' as component 
     WHERE $has_users_access::boolean;
 
