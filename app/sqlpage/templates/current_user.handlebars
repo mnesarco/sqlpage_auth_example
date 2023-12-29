@@ -1,0 +1,10 @@
+<div class="mb-2">
+{{#if username}}
+    <span class="badge badge-outline text-blue">{{~icon_img icon~}} {{username}}</span>
+{{/if}}
+{{#if name}}
+    {{#unless username}}
+    <span class="badge badge-outline text-blue">{{~icon_img icon~}} {{name}}</span>
+    {{/unless}}
+{{/if}}
+</div>

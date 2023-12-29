@@ -1,0 +1,5 @@
+# Dummy file
+
+This file is here just to keep the parent directory in git.
+
+Once you run `docker compose up` the postgresql database files will be placed in this folder.

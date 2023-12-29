@@ -1,0 +1,3 @@
+{
+    "database_url": "postgres://pguser:changeit123@db/pguser"
+}
