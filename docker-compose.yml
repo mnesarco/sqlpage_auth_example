@@ -25,7 +25,7 @@ services:
       test: pg_isready -U pguser -d pguser
       interval: 30s
       timeout: 30s
-      retries: 3
+      retries: 5
       start_period: 30s
     volumes:
       - ./db:/var/lib/postgresql/data
