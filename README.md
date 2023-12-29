@@ -18,6 +18,16 @@ cd sqlpage_auth_example
 docker compose up
 ```
 
+After docker services are up and runnig, Go to http://localhost:8087
+
+# Demo users
+
+* **user** has basic access
+* **user2** has manager access
+* **admin** has full access
+
+Password of all users is the same: `demo`
+
 # Disclaimer
 
 This is an example of a possible solution using the existing version of [SQLPage=0.17.1](https://github.com/lovasoa/SQLpage/)  Use at your own risk.
